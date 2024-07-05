@@ -1,0 +1,92 @@
+RESUME
+
+[ { "name": "Venkateshwaran",
+ "age": 28,
+ "email": "Venkatesh124@gmail.com",
+ "phone": "+91-9876543210", 
+"address": "123, EB office near, sathyamangalam, Erode",
+ "education": 
+[ { "degree": "BBA",
+ "institution": "Gobi arts and science college, Gobi",
+ "year_of_passing": 2021 } ],
+ "experience":
+ [ { "company": "SCM garments PVT ltd, "position": "senior quality checker", "duration": "2021-2022" }, { "company": "cognizant technology solutions", "position": "Senior process executive", "duration": "2022-present" } ],
+ "skills": ["MS Excel", "MS Office", "HTML", "CSS"] },
+
+ITERATION
+ const candidates = [ { "name": "Venkateshwaran",
+ "age": 28,
+ "email": "Venkatesh124@gmail.com",
+ "phone": "+91-9876543210", 
+"address": "123, EB office near, sathyamangalam, Erode",
+ "education": 
+[ { "degree": "BBA",
+ "institution": "Gobi arts and science college, Gobi",
+ "year_of_passing": 2021 } ],
+ "experience":
+ [ { "company": "SCM garments PVT ltd, "position": "senior quality checker", "duration": "2021-2022" }, { "company": "cognizant technology solutions", "position": "Senior process executive", "duration": "2022-present" } ],
+ "skills": ["MS Excel", "MS Office", "HTML", "CSS"] }
+
+//Using for loop 
+
+for (let i = 0; i < candidates.length; i++)
+ { console.log(`Name: ${candidates[i].name}`); 
+console.log(`Age: ${candidates[i].age}`);
+ console.log(`Email: ${candidates[i].email}`);
+ console.log(`Phone: ${candidates[i].phone}`);
+ console.log(`Address: ${candidates[i].address}`);
+ console.log(`Education:`); for (let j = 0; j < candidates[i].education.length; j++)
+ { console.log(` Degree: ${candidates[i].education[j].degree}`);
+ console.log(` Institution: ${candidates[i].education[j].institution}`); 
+console.log(` Year of Passing: ${candidates[i].education[j].year_of_passing}`); }
+ console.log(`Experience:`); for (let j = 0; j < candidates[i].experience.length; j++) { console.log(` Company: ${candidates[i].experience[j].company}`);
+ console.log(` Position: ${candidates[i].experience[j].position}`); 
+console.log(` Duration: ${candidates[i].experience[j].duration}`); }
+ console.log(`Skills: ${candidates[i].skills.join(', ')}`); } 
+
+// Using for...in loop 
+
+for (let index in candidates)
+ { console.log(`Name: ${candidates[index].name}`);
+ console.log(`Age: ${candidates[index].age}`); 
+console.log(`Email: ${candidates[index].email}`); 
+console.log(`Phone: ${candidates[index].phone}`);
+ console.log(`Address: ${candidates[index].address}`); 
+console.log(`Education:`); for (let eduIndex in candidates[index].education) { console.log(` Degree: ${candidates[index].education[eduIndex].degree}`);
+ console.log(` Institution: ${candidates[index].education[eduIndex].institution}`);
+ console.log(` Year of Passing: ${candidates[index].education[eduIndex].year_of_passing}`); } 
+console.log(`Experience:`); for (let expIndex in candidates[index].experience) { console.log(` Company: ${candidates[index].experience[expIndex].company}`);
+ console.log(` Position: ${candidates[index].experience[expIndex].position}`); console.log(` Duration: ${candidates[index].experience[expIndex].duration}`); }
+ console.log(`Skills: ${candidates[index].skills.join(', ')}`); } 
+
+// Using forEach loop 
+
+candidates.forEach(candidate => { console.log(`Name: ${candidate.name}`); 
+console.log(`Age: ${candidate.age}`); 
+console.log(`Email: ${candidate.email}`);
+ console.log(`Phone: ${candidate.phone}`);
+ console.log(`Address: ${candidate.address}`);
+ console.log(`Education:`); candidate.education.forEach(edu => { console.log(` Degree: ${edu.degree}`);
+ console.log(` Institution: ${edu.institution}`); 
+console.log(` Year of Passing: ${edu.year_of_passing}`); }); 
+console.log(`Experience:`); candidate.experience.forEach(exp => { console.log(` Company: ${exp.company}`);
+ console.log(` Position: ${exp.position}`); console.log(` Duration: ${exp.duration}`); });
+ console.log(`Skills: ${candidate.skills.join(', ')}`); }); 
+
+// Using for...of loop 
+
+for (const candidate of candidates) { console.log(`Name: ${candidate.name}`);
+ console.log(`Age: ${candidate.age}`);
+ console.log(`Email: ${candidate.email}`); 
+console.log(`Phone: ${candidate.phone}`);
+ console.log(`Address: ${candidate.address}`); 
+console.log(`Education:`); for (const edu of candidate.education) { console.log(` Degree: ${edu.degree}`); console.log(` Institution: ${edu.institution}`); console.log(` Year of Passing: ${edu.year_of_passing}`); }
+ console.log(`Experience:`); for (const exp of candidate.experience) { console.log(` Company: ${exp.company}`); console.log(` Position: ${exp.position}`); console.log(` Duration: ${exp.duration}`); }
+ console.log(`Skills: ${candidate.skills.join(', ')}`); }
+
+
+
+
+
+
+
